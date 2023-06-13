@@ -10,7 +10,8 @@ env:
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
   SUBSCRIPTION-ID: ${{ secrets.AZ_SECRET.SUBSCRIPTION-ID }}
   WEBAPP-NAME: ${{ secrets.AZ_SECRET.WEBAPP-NAME }}
-
+  
+  
 
 jobs:
   #Build, test and publish .net web project in repository
