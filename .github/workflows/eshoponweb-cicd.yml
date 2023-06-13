@@ -5,11 +5,11 @@ on: [push, workflow_dispatch]
 
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
-  RESOURCE-GROUP: ${{ secrets.RESOURCE-GROUP }}
+  RESOURCE-GROUP: ${{ secrets.AZ_SECRET.RESOURCE-GROUP }}
   LOCATION: westeurope
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
-  SUBSCRIPTION-ID: ${{ secrets.SUBSCRIPTION-ID }}
-  WEBAPP-NAME: ${{ secrets.WEBAPP-NAME }}
+  SUBSCRIPTION-ID: ${{ secrets.AZ_SECRET.SUBSCRIPTION-ID }}
+  WEBAPP-NAME: ${{ secrets.AZ_SECRET.WEBAPP-NAME }}
 
 
 jobs:
